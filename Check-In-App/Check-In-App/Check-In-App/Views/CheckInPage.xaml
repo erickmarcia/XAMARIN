@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="{Binding Title}"
+             x:Class="Check_In_App.Views.CheckInPage"
+             xmlns:vm="clr-namespace:Check_In_App.ViewModels">
+
+    
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- 1. Profile picture-->
+        <Image Grid.Row="0" Source="imagen_1" VerticalOptions="Start" />
+
+        <!-- 2. Contact informaqtion frame-->
+        <StackLayout Grid.Row="0" BackgroundColor="White" VerticalOptions="End">
+            <Frame CornerRadius="40" Style="{StaticResource stlMainFrame}" >
+                <!-- Blocks: 3 and 4 -->
+                <Grid Padding="25,10,25,0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!-- 4. Contact information-->
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"  Padding="0,10,0,0" Text="Marcos Morales" FontAttributes="Bold" FontSize="30"/>
+                    <!--<Label Grid.Row="1" Grid.Column="0" Text="" TextColor="#a5a2a2" FontSize="16"/>-->
+                    <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Padding="0,10,0,0" FontSize="20">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="# Empleado: " FontAttributes="Bold" FontSize="20"/>
+                                <Span Text="000001"  />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+    
+                    <!--4. Contact information: Follow button-->
+                    <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White" BackgroundColor="#2193f3" Text="Enviar" Margin="0,20,0,2" FontAttributes="Bold" FontSize="17" HeightRequest="45"/>
+                </Grid>
+            </Frame>
+        </StackLayout>
+
+
+    </Grid>
+
+</ContentPage>
